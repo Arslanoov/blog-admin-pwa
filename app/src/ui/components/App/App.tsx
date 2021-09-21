@@ -1,5 +1,7 @@
 import React from "react"
 
+import Button from "@mui/material/Button"
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -7,6 +9,7 @@ const App: React.FC = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Button>Test</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
