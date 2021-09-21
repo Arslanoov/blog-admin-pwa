@@ -1,19 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react"
+import ReactDOM from "react-dom"
 
-import App from './ui/components/App';
+import reportWebVitals from "./bootstrap/reportWebVitals"
+import * as serviceWorkerRegistration from "./bootstrap/registerServiceWorker"
 
-import reportWebVitals from './bootstrap/reportWebVitals';
-
-import * as serviceWorkerRegistration from './app/services/serviceWorkerRegistration';
+import App from "./ui/components/App"
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById("root")
+)
 
-serviceWorkerRegistration.unregister();
-
-reportWebVitals();
+serviceWorkerRegistration.unregister()
+reportWebVitals()
