@@ -1,10 +1,20 @@
 import React from "react"
 
+import Grid from "@mui/material/Grid"
+
 const AuthLayout: React.FC = ({ children }) => {
   return (
-    <div>
-      {children}
-    </div>
+    <Grid
+      spacing={2}
+      container
+    >
+      <Grid item xs={12} md={3}>
+        Sidebar
+      </Grid>
+      <Grid item xs={12} md={9}>
+        {children}
+      </Grid>
+    </Grid>
   )
 }
 
