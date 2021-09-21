@@ -3,7 +3,7 @@ import React from "react"
 import Box from "@mui/material/Box"
 import TextField from "@mui/material/TextField"
 
-import AuthLayout from "../../../layouts/AuthLayout"
+import AuthLayout from "ui/layouts/AuthLayout"
 
 const Login: React.FC = () => {
   return (
