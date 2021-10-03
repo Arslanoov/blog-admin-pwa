@@ -7,11 +7,11 @@ import {
 } from "react-router-dom"
 
 import { StylesProvider } from "@mui/styles"
-import CssBaseline from "@mui/material/CssBaseline"
+import { CssBaseline } from "@mui/material"
 
-import MainLayout from "./layouts/main-layout/Main.layout"
+import MainLayout from "ui/layouts/main-layout/Main.layout"
 
-const Login = React.lazy(() => import("./pages/Auth/Login/Login.page"))
+const Login = React.lazy(() => import("ui/pages/auth/login"))
 
 const routesPaths = {
   login: "/auth/login"
