@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.0",
     "@mui/styled-engine": "^5.0.0",
     "@mui/styled-engine-sc": "^5.0.0",
@@ -35,6 +36,7 @@
     "@types/react": "^16.14.15",
     "@types/react-dom": "^16.9.14",
     "@types/react-router-dom": "^5.1.9",
+    "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "eslint": "^7.32.0",
