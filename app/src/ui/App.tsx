@@ -6,39 +6,34 @@ import {
   Redirect
 } from "react-router-dom"
 
-import { StylesProvider } from "@mui/styles"
 import { CssBaseline } from "@mui/material"
 
-import MainLayout from "ui/layouts/main-layout/Main.layout"
+import { routesPaths } from "app/routes/paths"
+
+import MainLayout from "ui/layouts/main-layout"
 
 const Login = React.lazy(() => import("ui/pages/auth/login"))
 
-const routesPaths = {
-  login: "/auth/login"
-}
-
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="app">
       <CssBaseline />
-      <StylesProvider injectFirst>
-        <MainLayout>
-          <Router>
-            <Suspense fallback={<div>Loading</div>}>
-              <Switch>
-                <Route
-                  path={routesPaths.login}
-                  component={Login}
-                />
+      <MainLayout>
+        <Router>
+          <Suspense fallback={<div>Loading</div>}>
+            <Switch>
+              <Route
+                path={routesPaths.login}
+                component={Login}
+              />
 
-                <Redirect
-                  to={routesPaths.login}
-                />
-              </Switch>
-            </Suspense>
-          </Router>
-        </MainLayout>
-      </StylesProvider>
+              <Redirect
+                to={routesPaths.login}
+              />
+            </Switch>
+          </Suspense>
+        </Router>
+      </MainLayout>
     </div>
   )
 }
