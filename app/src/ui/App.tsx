@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from "react"
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,23 +6,34 @@ import {
   Redirect
 } from "react-router-dom"
 
-import Login from "./pages/Auth/Login"
+import { CssBaseline } from "@mui/material"
+
+import { routesPaths } from "app/routes/paths"
+
+import MainLayout from "ui/layouts/main-layout"
+
+const Login = React.lazy(() => import("ui/pages/auth/login"))
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route
-            path="/auth/login"
-            component={Login}
-          />
+    <div className="app">
+      <CssBaseline />
+      <MainLayout>
+        <Router>
+          <Suspense fallback={<div>Loading</div>}>
+            <Switch>
+              <Route
+                path={routesPaths.login}
+                component={Login}
+              />
 
-          <Redirect
-            to="/auth/login"
-          />
-        </Switch>
-      </Router>
+              <Redirect
+                to={routesPaths.login}
+              />
+            </Switch>
+          </Suspense>
+        </Router>
+      </MainLayout>
     </div>
   )
 }
